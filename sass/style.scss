@@ -1,0 +1,191 @@
+* {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 87.5%; //14px
+}
+
+body {
+	box-sizing: border-box;
+}
+
+.note {
+	width: 50%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: linear-gradient(40deg, lighten(gray, 40%), lighten(gray, 30%));
+	background-color: lighten(gray, 40%);
+	padding: .7rem;
+	border-radius: .5rem;
+}
+
+.note__header {
+	background-color: darken(orangered, 15%);
+	border-radius: .5rem;
+	padding: .1rem;
+	margin-bottom: 1rem;
+	box-shadow: .3rem .2rem 1.1rem lighten(black, 18%);
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 400;
+		font-family: cursive;
+		color: white;
+	}
+}
+
+.note__field {
+	width: 60%;
+	margin: 0 auto;
+
+	#note__input {
+		padding: .8rem 1rem;
+		border: none;
+
+		&:focus {
+			outline: none;
+			border: 3px inset white;
+			background-color: lighten(lightblue, 15%);
+		}
+	}
+
+	.submit {
+		text-align: center;
+
+		button[type="submit"] {
+			background-color: orange;
+			color: white;
+			border: none;
+			border-radius: .2rem;
+			padding: .4rem .6rem;
+			transition: all .2s ease;
+			font-size: 1.1rem;
+
+			&:hover {
+				background-color: lighten(orange, 5%);
+			}
+
+			&:active {
+				transform: scale(1.1);
+				font-weight: 400;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+.note__box {
+	width: 100%;
+
+	&-header {
+		text-align: center;
+		color: white;
+		background-color: lighten(darkred, 42%);
+		padding: 0.4rem 1.25rem;
+		border-bottom: 2px inset darkred;
+	}
+
+	&-items {
+		border-radius: .3rem;
+		background-color: white;
+		border: 3px groove white;
+	}
+}
+
+.list {
+	color: lighten(black, 20%);
+	font-weight: 500;
+	padding: 0.75rem 1.25rem;
+	display: block;
+	background: transparent;
+	margin-bottom: -1px;
+}
+
+input[type="checkbox"] {
+	visibility: hidden;
+	opacity: 0;
+
+	&:checked ~ label .checkbox-icon .vertical {
+		transition: all .4s ease;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&:checked ~ label .checkbox-icon .diagonal {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+label {
+	width: 1.3rem;
+	height: 1.3rem;
+	padding: .4rem;
+	border: 2px solid orange;
+	border-radius: .3rem;
+	position: absolute;
+
+	.checkbox-icon {
+		position: absolute;
+		top: -1px;
+		left: -.2px;
+		transform: rotate(-2deg);
+		transition: all 5s ease;
+	}
+
+	.vertical {
+		background-color: black;
+		width: .5rem;
+		height: .21rem;
+		position: absolute;
+		top: 9px;
+		left: 1px;
+		transform: rotate(40deg);
+		border-radius: 2px;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	.diagonal {
+		background: black;
+		width: .75rem;
+		height: .21rem;
+		position: absolute;
+		top: 8px;
+		left: 4px;
+		transform: rotate(-50deg);
+		border-radius: 2px;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.list-container {
+	padding: 0 .5rem;
+	display: flex;
+	align-items: center;
+}
+
+.note__box2 {
+	width: 100%;
+
+	&-header {
+		text-align: center;
+		color: white;
+		background-color: lighten(hotpink,1%);
+		padding: 0.4rem 1.25rem;
+		border-bottom: 2px inset darkred;
+	}
+	
+	&-checked {
+		border-radius: .3rem;
+		background-color: white;
+		border: 3px groove white;
+	}
+}

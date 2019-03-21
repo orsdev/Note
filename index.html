@@ -2,31 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <title>Starter Template · Bootstrap</title>   
-   <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>NOTE - TO DO LIST APP</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-    <main role="main" class="container">
-
-        <div class="text-center mt-5 pt-5">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        </div>
-
-    </main><!-- /.container -->
-
- <script src="js/jquery.min.js"></script>
- <script src="js/popper.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
- <script src="js/main.js"></script>
+	<main role="main" class="container">
+		<div class="note">
+			<div class="note__header">
+				<h1 class="note__heading">NOTE</h1>
+			</div>
+			<div class="note__field">
+				<div class="form-group">
+					<input type="text" id="note__input" class="form-control form-control-lg" placeholder="Take a note ">
+				</div>
+				<div class="form-group submit">
+					<button type="submit">Submit</button>
+				</div>
+			</div>
+			<div class="note__box">
+				<div class="note__box-items">
+					<div class="note__box-header">
+						<h4>List Items</h4>
+					</div>
+					<div class="list-container">
+						<input type="checkbox" id="checkbox0">
+						<label for="checkbox0">
+							<span class="checkbox-icon">
+								<span class="vertical">&nbsp;</span><span class="diagonal">&nbsp;</span>
+							</span>
+						</label>
+						<p class="list">
+							PRAY
+						</p>
+					</div>
+				
+					
+				</div>
+			</div>
+			<div class="note__box2">
+				<div class="note__box2-checked">
+				<div class="note__box2-header">
+						<h4>Checked Items</h4>
+					</div>
+				  <div class="checked-container">
+				  </div>
+				</div>
+			</div>
+		</div>
+	</main><!-- /.container -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
+
 </html>
