@@ -1,5 +1,6 @@
 * {
 	box-sizing: inherit;
+
 }
 
 html {
@@ -11,12 +12,9 @@ body {
 }
 
 .note {
-	width: 50%;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-image: linear-gradient(40deg, lighten(gray, 40%), lighten(gray, 30%));
+	width: 300px;
+	margin: 20px auto;
+	background-image: linear-gradient(lighten(#BF8526, 15%), lighten(#BF8526, 10%));
 	background-color: lighten(gray, 40%);
 	padding: .7rem;
 	border-radius: .5rem;
@@ -38,7 +36,8 @@ body {
 }
 
 .note__field {
-	width: 60%;
+	width: 250px;
+	;
 	margin: 0 auto;
 
 	#note__input {
@@ -80,6 +79,11 @@ body {
 	}
 }
 
+.note__container {
+	width: 90%;
+	margin: 0 auto;
+}
+
 .note__box {
 	width: 100%;
 
@@ -95,13 +99,14 @@ body {
 		border-radius: .3rem;
 		background-color: white;
 		border: 3px groove white;
+		position: relative;
 	}
 }
 
 .list {
 	color: lighten(black, 20%);
 	font-weight: 500;
-	padding: 0.75rem 1.25rem;
+	padding: 0.75rem .5rem;
 	display: block;
 	background: transparent;
 	margin-bottom: -1px;
@@ -121,6 +126,8 @@ input[type="checkbox"] {
 		visibility: visible;
 		opacity: 1;
 	}
+
+
 }
 
 label {
@@ -166,26 +173,26 @@ label {
 	}
 }
 
+.remove {
+	color: white;
+	text-align: right;
+	margin-left: 3px;
+	font-size: .8rem;
+	
+	&:active {
+		font-size: 1rem;
+	}
+}
+
+p {
+	margin-left: 8px;
+	width: 80%;
+	font-size: 1.1rem;
+}
+
 .list-container {
 	padding: 0 .5rem;
 	display: flex;
 	align-items: center;
-}
-
-.note__box2 {
-	width: 100%;
-
-	&-header {
-		text-align: center;
-		color: white;
-		background-color: lighten(hotpink,1%);
-		padding: 0.4rem 1.25rem;
-		border-bottom: 2px inset darkred;
-	}
-	
-	&-checked {
-		border-radius: .3rem;
-		background-color: white;
-		border: 3px groove white;
-	}
+	margin-bottom: 5px;
 }

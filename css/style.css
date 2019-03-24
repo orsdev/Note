@@ -8,12 +8,9 @@ body {
   box-sizing: border-box; }
 
 .note {
-  width: 50%;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: linear-gradient(40deg, #e6e6e6, #cdcdcd);
+  width: 300px;
+  margin: 20px auto;
+  background-image: linear-gradient(#dda954, #d99f3f);
   background-color: #e6e6e6;
   padding: .7rem;
   border-radius: .5rem; }
@@ -31,7 +28,7 @@ body {
     color: white; }
 
 .note__field {
-  width: 60%;
+  width: 250px;
   margin: 0 auto; }
   .note__field #note__input {
     padding: .8rem 1rem;
@@ -58,6 +55,10 @@ body {
       .note__field .submit button[type="submit"]:focus {
         outline: none; }
 
+.note__container {
+  width: 90%;
+  margin: 0 auto; }
+
 .note__box {
   width: 100%; }
   .note__box-header {
@@ -69,12 +70,13 @@ body {
   .note__box-items {
     border-radius: .3rem;
     background-color: white;
-    border: 3px groove white; }
+    border: 3px groove white;
+    position: relative; }
 
 .list {
   color: #333333;
   font-weight: 500;
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem .5rem;
   display: block;
   background: transparent;
   margin-bottom: -1px; }
@@ -126,22 +128,23 @@ label {
     visibility: hidden;
     opacity: 0; }
 
+.remove {
+  color: white;
+  text-align: right;
+  margin-left: 3px;
+  font-size: .8rem; }
+  .remove:active {
+    font-size: 1rem; }
+
+p {
+  margin-left: 8px;
+  width: 80%;
+  font-size: 1.1rem; }
+
 .list-container {
   padding: 0 .5rem;
   display: flex;
-  align-items: center; }
-
-.note__box2 {
-  width: 100%; }
-  .note__box2-header {
-    text-align: center;
-    color: white;
-    background-color: #ff6eb7;
-    padding: 0.4rem 1.25rem;
-    border-bottom: 2px inset darkred; }
-  .note__box2-checked {
-    border-radius: .3rem;
-    background-color: white;
-    border: 3px groove white; }
+  align-items: center;
+  margin-bottom: 5px; }
 
 /*# sourceMappingURL=style.css.map */
