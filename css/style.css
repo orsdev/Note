@@ -132,14 +132,22 @@ label {
   color: white;
   text-align: right;
   margin-left: 3px;
-  font-size: .8rem; }
+  font-size: .8rem;
+  transition: font-size .2s ease; }
   .remove:active {
     font-size: 1rem; }
 
 p {
   margin-left: 8px;
   width: 80%;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  text-transform: uppercase; }
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  opacity: .8;
+  font-size: 1rem; }
 
 .list-container {
   padding: 0 .5rem;

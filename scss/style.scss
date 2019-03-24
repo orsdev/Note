@@ -1,6 +1,5 @@
 * {
 	box-sizing: inherit;
-
 }
 
 html {
@@ -126,8 +125,6 @@ input[type="checkbox"] {
 		visibility: visible;
 		opacity: 1;
 	}
-
-
 }
 
 label {
@@ -178,7 +175,8 @@ label {
 	text-align: right;
 	margin-left: 3px;
 	font-size: .8rem;
-	
+	transition: font-size .2s ease;
+
 	&:active {
 		font-size: 1rem;
 	}
@@ -188,6 +186,14 @@ p {
 	margin-left: 8px;
 	width: 80%;
 	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+.checked {
+	text-decoration: line-through;
+	text-decoration-color: red;
+	opacity: .8;
+	font-size: 1rem;
 }
 
 .list-container {

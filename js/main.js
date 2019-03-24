@@ -3,6 +3,7 @@ $(document).ready(function () {
 	var count = 0;
 	const noteBox = $('.note__box-items');
 
+	//get input and add to list
 	$('button[type="submit"]').click(function () {
 
 		//get input value
@@ -33,15 +34,15 @@ $(document).ready(function () {
 
 			//create p element and add textContent
 			const p = $('<p class="list">').text(inputVal);
-			
+
 			//create a element and add textContent
-			const a = $('<a class="remove badge badge-danger">').attr('href' , '#').text('X');
-			
+			const a = $('<a class="remove badge badge-danger">').attr('href', '#').text('X');
+
 			//push parentSpan into label
 			label.append(parentSpan);
 
 			//push checkbox,label , p & a into div
-			div.append(checkbox, label, p , a);
+			div.append(checkbox, label, p, a);
 
 			noteBox.append(div);
 
@@ -52,16 +53,29 @@ $(document).ready(function () {
 
 	//remove list
 	$('.note__box-items').on('click', 'a', function (e) {
-		
+
 		e.preventDefault();
-		
+
 		//delete list if remove(X) is clicked
 		$(this).parent().remove();
-		
+
+	});
+
+	
+	$('.note__box-items').on('click', 'input', function (e) {
+
+		if (e.target.checked) {
+			
+			//apply style(add class)
+			$(this).next().next().addClass('checked');
+
+		} else {
+			
+			//remove style(remove class)
+			$(this).next().next().removeClass('checked');
+
+		}
+
 	})
 
 })
-
-
-
-
