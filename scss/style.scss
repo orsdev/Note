@@ -8,6 +8,7 @@ html {
 
 body {
 	box-sizing: border-box;
+	background-color: antiquewhite;
 }
 
 .note {
@@ -99,6 +100,7 @@ body {
 		background-color: white;
 		border: 3px groove white;
 		position: relative;
+		margin-bottom: 10px;
 	}
 }
 
@@ -202,3 +204,39 @@ p {
 	align-items: center;
 	margin-bottom: 5px;
 }
+
+.bg-colors {
+	display: flex;
+	justify-content: center;
+	
+	.white,
+.lightblue,
+.lightgreen,
+.lightpurple{
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	
+	&:not(:last-child){
+		margin-right: 5px;
+	}
+};
+	
+	.white {
+		background-color: white;
+	}
+	
+	.lightblue{
+		background-color: lighten(lightblue, 5%);
+	}
+	
+	.lightgreen{
+		background-color: lighten(green ,55%);
+	}
+	
+	.lightpurple{
+		background-color: lighten(purple,60%);
+	}
+}
+
+

@@ -61,21 +61,47 @@ $(document).ready(function () {
 
 	});
 
-	
+
 	$('.note__box-items').on('click', 'input', function (e) {
 
 		if (e.target.checked) {
-			
+
 			//apply style(add class)
 			$(this).next().next().addClass('checked');
 
 		} else {
-			
+
 			//remove style(remove class)
 			$(this).next().next().removeClass('checked');
 
 		}
 
-	})
+	});
 
-})
+	
+//change background
+	$('.bg-colors').on('click', 'div', function () {
+
+		if ($(this).hasClass('white')) {
+
+			$(this).parent().prev().css('background-color', 'white');
+
+		} else if ($(this).hasClass('lightblue')) {
+
+			$(this).parent().prev().css('background-color', '#d4ebf2');
+
+		} else if ($(this).hasClass('lightgreen')) {
+
+			$(this).parent().prev().css('background-color', '#c2ffc2');
+
+		} else {
+
+			$(this).parent().prev().css('background-color', '#ffdcff');
+
+		}
+
+
+
+	});
+
+});

@@ -5,7 +5,8 @@ html {
   font-size: 87.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: antiquewhite; }
 
 .note {
   width: 300px;
@@ -71,7 +72,8 @@ body {
     border-radius: .3rem;
     background-color: white;
     border: 3px groove white;
-    position: relative; }
+    position: relative;
+    margin-bottom: 10px; }
 
 .list {
   color: #333333;
@@ -154,5 +156,29 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 5px; }
+
+.bg-colors {
+  display: flex;
+  justify-content: center; }
+  .bg-colors .white,
+  .bg-colors .lightblue,
+  .bg-colors .lightgreen,
+  .bg-colors .lightpurple {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%; }
+    .bg-colors .white:not(:last-child),
+    .bg-colors .lightblue:not(:last-child),
+    .bg-colors .lightgreen:not(:last-child),
+    .bg-colors .lightpurple:not(:last-child) {
+      margin-right: 5px; }
+  .bg-colors .white {
+    background-color: white; }
+  .bg-colors .lightblue {
+    background-color: #c1e1ec; }
+  .bg-colors .lightgreen {
+    background-color: #9aff9a; }
+  .bg-colors .lightpurple {
+    background-color: #ffb3ff; }
 
 /*# sourceMappingURL=style.css.map */
