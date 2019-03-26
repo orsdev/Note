@@ -30,27 +30,29 @@ body {
 
 .note__field {
   width: 250px;
+  display: flex;
   margin: 0 auto; }
   .note__field #note__input {
-    padding: .8rem 1rem;
+    padding: .5rem 1rem;
     border: none; }
     .note__field #note__input:focus {
       outline: none;
-      border: 3px inset white;
+      border: 1px inset white;
       background-color: #e8f4f8; }
   .note__field .submit {
     text-align: center; }
     .note__field .submit button[type="submit"] {
-      background-color: orange;
+      background-color: #b33000;
       color: white;
       border: none;
       border-radius: .2rem;
-      border: 1px groove orange;
-      padding: .4rem .6rem;
+      border: 1px groove #b33000;
+      padding: .5rem .6rem;
+      margin-top: 1.2px;
       transition: all .2s ease;
       font-size: 1.1rem; }
       .note__field .submit button[type="submit"]:hover {
-        background-color: #ffae1a; }
+        background-color: #c23400; }
       .note__field .submit button[type="submit"]:active {
         transform: scale(1.1);
         font-weight: 400; }
@@ -59,7 +61,31 @@ body {
 
 .note__container {
   width: 90%;
-  margin: 0 auto; }
+  margin: 15px auto 0 auto; }
+  .note__container p {
+    margin-left: 8px;
+    width: 80%;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #333333;
+    font-weight: 500;
+    padding: 0.75rem .5rem;
+    display: block;
+    background: transparent;
+    margin-bottom: -1px; }
+  .note__container .checked {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    opacity: .8;
+    font-size: .9rem; }
+  .note__container .remove {
+    color: white;
+    text-align: right;
+    margin-left: 3px;
+    font-size: .8rem;
+    transition: font-size .2s ease; }
+    .note__container .remove:active {
+      font-size: 1rem; }
 
 .note__box {
   width: 100%; }
@@ -75,14 +101,6 @@ body {
     border: 3px groove white;
     position: relative;
     margin-bottom: 10px; }
-
-.list {
-  color: #333333;
-  font-weight: 500;
-  padding: 0.75rem .5rem;
-  display: block;
-  background: transparent;
-  margin-bottom: -1px; }
 
 input[type="checkbox"] {
   visibility: hidden;
@@ -131,26 +149,14 @@ label {
     visibility: hidden;
     opacity: 0; }
 
-.remove {
+.message {
   color: white;
-  text-align: right;
-  margin-left: 3px;
-  font-size: .8rem;
-  transition: font-size .2s ease; }
-  .remove:active {
-    font-size: 1rem; }
-
-p {
-  margin-left: 8px;
-  width: 80%;
+  width: 60%;
+  font-weight: 500;
+  text-align: center;
   font-size: 1.1rem;
-  text-transform: uppercase; }
-
-.checked {
-  text-decoration: line-through;
-  text-decoration-color: red;
-  opacity: .8;
-  font-size: 1rem; }
+  margin: -10px auto 0 auto;
+  opacity: 0; }
 
 .list-container {
   padding: 0 .5rem;

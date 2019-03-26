@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
+	var array = [];
 	var count = 0;
+	var count2 = 0;
 	const noteBox = $('.note__box-items');
 
 	//get input and add to list
@@ -10,9 +12,34 @@ $(document).ready(function () {
 		//get input value
 		const inputVal = $('input[type="text"]').val();
 
-		//check if input value is not empty
-		if (inputVal !== '') {
- 
+		//check if input value already exist
+		if (array.length > 0 && array.indexOf(inputVal) > -1) {
+
+			$('.message').css('opacity', '1');
+
+			setTimeout(function () {
+
+				$('.message').css('opacity', '0');
+
+			}, 1600)
+
+			//increment to keep stop input value from going to my lists
+			count2++;
+
+		} else {
+
+			count2 = 0;
+
+		}
+
+
+
+		//if input value is not empty && count2 is zero
+		if (inputVal !== '' && count2 == 0) {
+
+			//push input value into array
+			array.push(inputVal);
+		
 			//create new div element
 			const div = $('<div>').addClass('list-container');
 
@@ -32,10 +59,9 @@ $(document).ready(function () {
 			//push children spans into label
 			parentSpan.append(childSpan1, childSpan2);
 
-
 			//create p element and add textContent
 			const p = $('<p class="list">').text(inputVal);
-			
+
 			//create a element and add textContent
 			const a = $('<a class="remove badge badge-danger">').attr('href', '#').text('X');
 
@@ -47,10 +73,12 @@ $(document).ready(function () {
 
 			noteBox.append(div);
 
+			//increment to keep track of label for
 			count++;
-		
+
 		}
-			
+
+
 	});
 
 	//remove list
@@ -60,6 +88,20 @@ $(document).ready(function () {
 
 		//delete list if remove(X) is clicked
 		$(this).parent().remove();
+
+		//decrement count to make labelfor last index consistent
+		count--;
+		
+		//get label for last index
+		var labelForLastNum =
+				
+			Number($(this).prev().prev().attr('for').substring(8));
+
+		//remove from array when X is clicked
+		array.splice(labelForLastNum, 1);
+
+
+
 
 	});
 
@@ -71,12 +113,14 @@ $(document).ready(function () {
 			//apply style(add class)
 			$(this).next().next().addClass('checked');
 
+
 		} else {
 
 			//remove style(remove class)
 			$(this).next().next().removeClass('checked');
 
 		}
+
 
 	});
 
