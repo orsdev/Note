@@ -33,13 +33,12 @@ $(document).ready(function () {
 		}
 
 
-
 		//if input value is not empty && count2 is zero
 		if (inputVal !== '' && count2 == 0) {
 
 			//push input value into array
 			array.push(inputVal);
-		
+
 			//create new div element
 			const div = $('<div>').addClass('list-container');
 
@@ -91,17 +90,14 @@ $(document).ready(function () {
 
 		//decrement count to make labelfor last index consistent
 		count--;
-		
+
 		//get label for last index
 		var labelForLastNum =
-				
+
 			Number($(this).prev().prev().attr('for').substring(8));
 
 		//remove from array when X is clicked
 		array.splice(labelForLastNum, 1);
-
-
-
 
 	});
 
