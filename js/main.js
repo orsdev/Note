@@ -6,12 +6,13 @@ $(document).ready(function () {
 	//get input and add to list
 	$('button[type="submit"]').click(function () {
 
+
 		//get input value
 		const inputVal = $('input[type="text"]').val();
 
 		//check if input value is not empty
 		if (inputVal !== '') {
-
+ 
 			//create new div element
 			const div = $('<div>').addClass('list-container');
 
@@ -34,7 +35,7 @@ $(document).ready(function () {
 
 			//create p element and add textContent
 			const p = $('<p class="list">').text(inputVal);
-
+			
 			//create a element and add textContent
 			const a = $('<a class="remove badge badge-danger">').attr('href', '#').text('X');
 
@@ -47,8 +48,9 @@ $(document).ready(function () {
 			noteBox.append(div);
 
 			count++;
-
+		
 		}
+			
 	});
 
 	//remove list
@@ -78,8 +80,8 @@ $(document).ready(function () {
 
 	});
 
-	
-//change background
+
+	//change background
 	$('.bg-colors').on('click', 'div', function () {
 
 		if ($(this).hasClass('white')) {
@@ -88,7 +90,7 @@ $(document).ready(function () {
 
 		} else if ($(this).hasClass('lightblue')) {
 
-			$(this).parent().prev().css('background-color', '#d4ebf2');
+			$(this).parent().prev().css('background-color', '#c1e1ec');
 
 		} else if ($(this).hasClass('lightgreen')) {
 
@@ -96,11 +98,9 @@ $(document).ready(function () {
 
 		} else {
 
-			$(this).parent().prev().css('background-color', '#ffdcff');
+			$(this).parent().prev().css('background-color', '#ffd7ff');
 
 		}
-
-
 
 	});
 

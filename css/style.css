@@ -21,9 +21,9 @@ body {
   border-radius: .5rem;
   padding: .1rem;
   margin-bottom: 1rem;
-  box-shadow: 0.3rem 0.2rem 1.1rem #2e2e2e; }
+  box-shadow: 0.3rem 0.2rem 1.1rem rgba(46, 46, 46, 0.6); }
   .note__header h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 400;
     font-family: cursive;
     color: white; }
@@ -45,6 +45,7 @@ body {
       color: white;
       border: none;
       border-radius: .2rem;
+      border: 1px groove orange;
       padding: .4rem .6rem;
       transition: all .2s ease;
       font-size: 1.1rem; }
