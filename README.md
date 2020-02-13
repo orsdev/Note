@@ -2,7 +2,7 @@
 
 ## About
 
-An online todo list web app
+An online todo web app
 
 ## Built With
 
